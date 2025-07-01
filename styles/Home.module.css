@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.container {
+  @apply bg-black p-8 min-h-screen mt-5 relative;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(34, 34, 34, 0.8));
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  width: calc(100% - 20px);
+}
+
+@screen lg {
+  .container {
+    @apply rounded-lg;
+  }
+}
+
+.section {
+  @apply mb-8;
+}
+
+.section h1 {
+  @apply text-3xl font-bold mb-4;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  @screen lg {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+.premio {
+  color: #aaaaaa;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.subPremio {
+  color: #aaaaaa;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+  font-size: calc(2.5rem - 2px);
+  @apply text-3xl font-bold mb-4;
+  font-size: 2.3rem;
+  line-height: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.subPremio2 {
+  color: #aaaaaa;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+  font-size: calc(2.5rem - 4px);
+  @apply text-3xl font-bold mb-4;
+  margin-top: -5px;
+  margin-bottom: 45px;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+  }
+  to {
+    text-shadow: 0 0 20px rgb(255, 196, 0), 0 0 30px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.6);
+  }
+}
+
+.section p, .section ul, .section li {
+  @apply mb-4;
+}
+
+.section img {
+  @apply mb-4;
+}
+
+.premioImage {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 570px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.premioContainer {
+  display: flex;
+  flex-direction: column; /* Asegurar que los elementos estén en columna en todas las escalas */
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 20px; /* Mover la regla de margen aquí para aplicarla en todas las escalas */
+}
+
+.premioText {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0; /* Mover la regla de margen aquí para aplicarla en todas las escalas */
+  margin-bottom: 0; /* Mover la regla de margen aquí para aplicarla en todas las escalas */
+  text-align: center; /* Mover la regla de alineación aquí para aplicarla en todas las escalas */
+}
+
+.premioText h1, .premioText h2, .premioText h3 {
+  text-align: center;
+}
+
+.premioText h1 {
+  margin-top: 60px;
+}
+
+.dateTime {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dateTimeIcon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  position: relative;
+  top: -8px;
+}
+
+.dateTimeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: static; /* Mover la regla de posición aquí para aplicarla en todas las escalas */
+  margin-top: 20px; /* Mover la regla de margen aquí para aplicarla en todas las escalas */
+  transform: none; /* Mover la regla de transformación aquí para aplicarla en todas las escalas */
+}
+
+.largeText {
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(128, 128, 128, 0.5);
+  @screen lg {
+    font-size: 1.4rem;
+    margin-top: -19px;
+  }
+}
+
+@media (max-width: 5000px) {
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .premioImage {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dateTimeContainer {
+    display: flex;
+    justify-content: center;
+    position: static;
+    margin-top: 20px;
+    transform: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .premio {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .largeText {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .dateTime {
+    font-size: 1.2rem;
+  }
+
+  .dateTimeIcon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .premio {
+    font-size: 2rem;
+  }
+
+  .subPremio {
+    font-size: 1.6rem;
+  }
+
+  .subPremio2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .largeText {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .dateTime {
+    font-size: 1rem;
+  }
+
+  .dateTimeIcon {
+    font-size: 1.2rem;
+  }
+  .premioText h1{
+    font-size: 1.8rem;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 39%;
+  height: 100%;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.premioImage {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  height: auto;
+}

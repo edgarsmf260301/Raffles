@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../public/img/background.svg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw; /* Asegura que el ancho sea igual al ancho de la ventana gráfica */
+    height: 100vh; /* Asegura que la altura sea igual a la altura de la ventana gráfica */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+body {
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+
+/* Oculta la barra de desplazamiento en navegadores basados en WebKit */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.drop-shadow-red {
+  filter: drop-shadow(0 0 0.2px rgb(255, 255, 255));
+}

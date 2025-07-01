@@ -1,0 +1,73 @@
+.formGroup {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  color: white;
+  margin-bottom: 6px;
+  font-size: 2rem; /* Ajustar el tamaño de fuente a 2rem */
+}
+
+.selectField {
+  width: 100%;
+}
+
+.error {
+  color: rgb(239 68 68);
+  font-size: 0.875em;
+  margin-top: 2.8px;
+  display: block;
+}
+
+.react-select__control {
+  background-color: #1F2937;
+  border-color: #ccc;
+  color: white;
+  height: 40px;
+  width: 100%;
+}
+
+.react-select__single-value {
+  color: white;
+  font-size: 15px;
+}
+
+.react-select__value-container {
+  height: 40px;
+}
+
+.react-select__menu {
+  background-color: #1F2937;
+  color: white;
+}
+
+.react-select__option {
+  background-color: #1F2937;
+  color: white;
+  font-size: 15px;
+}
+
+.react-select__option--is-focused {
+  background-color: #555;
+}
+
+@media (min-width: 1024px) {
+  .formGroup {
+    width: 100%; 
+    margin-right: 30px; 
+  }
+}
+
+@media (max-width: 1023px) {
+  .formGroup {
+    text-align: center; 
+  }
+}
+
+@media (max-width: 510px) {
+  .label {
+    font-size: 1.4rem; 
+  }
+}

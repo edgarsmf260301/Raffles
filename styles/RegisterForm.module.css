@@ -1,0 +1,402 @@
+.registerSection {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.formContainer {
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.inputField {
+  background-color: #1F2937;
+  border: 1px solid #ccc;
+  color: white;
+  height: 40px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.inputField::placeholder {
+  color: #ccc;
+}
+
+.phoneInputContainer {
+  display: flex;
+  width: 100%;
+}
+
+.phoneCodeSelect {
+  flex: 0 0 130px;
+  margin-right: 10px;
+}
+
+.phoneNumberInput {
+  flex: 1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: rgb(239 68 68);
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+
+.paymentMethodContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.paymentMethodOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.paymentOptionImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-right: 10px;
+  filter: drop-shadow(0 0 20px white);
+  transition: transform 0.3s ease-in-out;
+}
+
+.paymentOptionImage {
+  width: 100%;
+  height: 100%;
+}
+
+.hiddenRadio {
+  display: none;
+}
+
+.checkMark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+  color: rgb(88, 202, 88);
+  animation: checkAnimation 0.3s ease-in-out;
+}
+
+@keyframes checkAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.selected {
+  transform: scale(1.1);
+}
+
+.paymentInfo {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyButton {
+  margin-left: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+  transition: filter 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+.copyButton:hover {
+  color: #ccc;
+}
+
+.copiedMessage {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-left: 10px;
+  animation: fadeInOut 2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  white-space: nowrap;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.paymentInfoItem {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 8px;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+}
+
+.paymentInfoContainer {
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 12px 20px 5px 20px;
+  margin: 40px auto 20px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  margin: 55px 0 20px;
+}
+
+.checkboxLabel input {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkboxText {
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.fileInputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.fileInput {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.customFileButton {
+  background-color: #1F2937;
+  color: white;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.customFileButton:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+.submitButton {
+  background-color: #c82222;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+.submitButton:active {
+  background-color: #a7a7a7;
+  transform: scale(0.95);
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (min-width: 1024px) {
+  .registerSection {
+    max-width: 1500px;
+  }
+
+  .formGroupRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .paymentOptionImageContainer {
+    width: 150px;
+    height: 150px;
+    margin-right: 1px;
+  }
+
+  .formGroupRow .formGroup:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  .formGroup {
+    width: 100%;
+  }
+
+  .label {
+    text-align: left;
+  }
+
+  .customFileButton {
+    width: 50%;
+  }
+
+  .submitButton {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .paymentMethodContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .paymentMethodContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .paymentMethodOption:nth-last-child(-n+2) {
+    grid-column: span 2;
+    justify-self: center;
+  }
+}
+
+.centeredLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.whatsappLink {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 510px) {
+  .registerSection {
+    padding: 0;
+  }
+
+  .formContainer {
+    padding: 5px;
+  }
+
+  .title {
+    font-size: 1.61rem;
+  }
+
+  .label {
+    font-size: 1.4rem;
+  }
+
+  .phoneCodeSelect {
+    margin-right: 0;
+    flex: 0 0 98px;
+    height: 30px;
+  }
+
+  .phoneNumberInput {
+    width: 5px;
+  }
+
+  .checkboxText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .paymentMethodContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .paymentMethodOption:nth-child(4) {
+    grid-column: 2 / 3;
+  }
+
+  .paymentMethodOption:nth-child(5) {
+    grid-column: 1 / 2;
+  }
+
+}

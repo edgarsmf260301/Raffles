@@ -1,0 +1,71 @@
+.availableTicketsContainer {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .availableTicketsGrid {
+    display: grid;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .ticketCard {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #000000; /* Cambiar el color del texto a negro */
+  }
+  
+  .ticketCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .ticketCard.selected {
+    background-color: red; /* Cambiar el color de fondo a rojo */
+    border-color: darkred;
+    color: white; /* Cambiar el color del texto a blanco */
+  }
+  
+  .paginationButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .paginationButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .paginationButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .paginationButton:not(:disabled):hover {
+    background-color: #ff6347;
+  }
+   
+  @media (max-width: 767px) { /* Escala móvil */
+    .availableTicketsGrid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+  
+    .availableTicketsGrid > *:nth-child(n+16) {
+      display: none; /* Ocultar los elementos después del 15º */
+    }
+  }
+  @media (min-width: 768px) { /* Escala md y lg */
+    .availableTicketsGrid {
+      grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    }
+  }

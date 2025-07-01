@@ -1,0 +1,44 @@
+.selectedTicketsContainer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.selectedTicketsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto)); /* Ajustar automáticamente el número de columnas */
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center; /* Centrar los tickets horizontalmente */
+  align-items: center; /* Centrar los tickets verticalmente */
+  grid-auto-flow: dense; /* Distribuir los elementos de manera compacta */
+}
+
+.ticketCard {
+  padding: 20px;
+  border: 2px solid #f44336; /* Borde rojo */
+  border-radius: 10px;
+  background-color: #f8d7da; /* Fondo rojo claro */
+  color: #721c24; /* Texto rojo oscuro */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgb(255, 255, 255); /* Borde difuminado blanco */
+  display: flex;
+  justify-content: center; /* Centrar el contenido del ticket horizontalmente */
+  align-items: center; /* Centrar el contenido del ticket verticalmente */
+  height: 60px; /* Altura fija para los tickets */
+}
+
+.ticketCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.selectedTicketsContainer h1 {
+  font-size: 2.5rem; /* Tamaño de fuente de 2.5rem para el h1 */
+  color: #f44336; /* Color rojo para el título */
+}
+
+@media (max-width: 510px) {
+  .ticketCard {
+    padding: 10px; /* Ajustar el padding */
+  }
+}

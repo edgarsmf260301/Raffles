@@ -1,0 +1,77 @@
+.navbar {
+  @apply bg-black text-white p-4 flex flex-col md:flex-row md:items-center md:justify-between relative top-0 left-0 right-0 w-full z-50 transition-transform duration-300 ease-in-out;
+}
+
+@screen lg {
+  .navbar {
+    @apply left-[30px] right-[30px] w-[calc(100%-60px)] border-b-2 border-l-2 border-r-2 border-gray-500 rounded-b-lg; /* Borde redondeado solo en la parte inferior en pantallas grandes */
+  }
+}
+
+.navbarHidden {
+  transform: translateY(-100%); 
+}
+
+.navbarVisible {
+  transform: translateY(0); 
+}
+
+.navbarLogo {
+  @apply flex justify-center mb-4 md:mb-0;
+}
+
+.navbarList {
+  @apply hidden md:flex flex-col md:flex-row md:items-center md:justify-between w-full mt-4 md:mt-0;
+}
+
+@screen md {
+  .navbarItem {
+    @apply mx-2.5; 
+  }
+}
+
+@screen lg {
+  .navbarItem {
+    @apply mx-5; 
+  }
+}
+
+.navbarItem {
+  @apply flex-1 text-center;
+}
+
+.navbarLink {
+  @apply inline-block py-2 px-6 lg:py-2 lg:px-8 w-full max-w-[200px] border-2 border-secondary rounded-lg text-center text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary shadow-lg hover:shadow-gray-500/50;
+}
+
+.navbarLinkHover:hover {
+  @apply text-black bg-red-600 border-transparent;
+}
+
+.navbarLinkWinners {
+  @apply text-black bg-red-600 border-transparent;
+}
+
+.navbarLinkWinnersHover:hover {
+  @apply text-white bg-black border-secondary;
+}
+
+.hamburger {
+  @apply md:hidden flex items-center cursor-pointer relative top-[-3px];
+}
+
+.hamburgerIcon {
+  @apply w-6 h-6;
+}
+
+.navbarListMobile {
+  @apply flex flex-col items-center space-y-4 mt-4;
+}
+
+#home,
+#register,
+#contacts,
+#verify {
+  margin-top: -5px;
+  padding-top: 5px; 
+}

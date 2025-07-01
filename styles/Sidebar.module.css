@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.sidebarOpen {
+  width: 250px;
+  transition: width 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.sidebarClosed {
+  width: 40px;
+  transition: width 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.toggleButton {
+  position: absolute;
+  top: 10px;
+  right: -7px;
+  background-color: #c82222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.2rem; 
+  z-index: 1000;
+  font-family: 'Orbitron', sans-serif; 
+}
+
+.toggleButton:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+.toggleButton:active {
+  background-color: #a7a7a7;
+  transform: scale(0.95);
+}
+
+.filterButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 5px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.filterButton:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.filterButton:active {
+  background-color: #004080;
+  transform: scale(0.95);
+}
+
+.sidebarContent {
+  padding: 20px;
+}
+
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  color: white; 
+  background-color: black; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 200px; 
+}
+
+.dateInput {
+  appearance: none; 
+  -webkit-appearance: none; 
+  position: relative;
+  background-color: black; 
+  color: white; 
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+  filter: invert(1); 
+  cursor: pointer;
+}
+
+.selectFilter {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.button {
+    background-color: #c82222;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 5px auto; /* Centrar el botón */
+    display: block; /* Asegurarse de que el botón sea un bloque */
+}
+
+.button:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: #a7a7a7;
+  transform: scale(0.95);
+}

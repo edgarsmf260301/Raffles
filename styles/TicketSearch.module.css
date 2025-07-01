@@ -1,0 +1,82 @@
+.ticketSearchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.ticketSearchInput {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* Hacer la barra de búsqueda un poco transparente */
+  color: #000000; /* Cambiar el color del texto a negro */
+}
+
+.ticketSearchInput::placeholder {
+  color: #000000; /* Cambiar el color del texto del placeholder a negro */
+}
+
+.ticketSearchInput:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+  outline: none;
+}
+
+.ticketSearchButton {
+  position: relative;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ticketSearchButton:hover {
+  background-color: #ff5555;
+  transform: scale(1.05);
+}
+
+.ticketSearchButton::after {
+  content: '🍀'; /* Trébol de la suerte */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) { /* Escala md */
+  .ticketSearchContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ticketSearchInput {
+    margin-right: 40px; /* Disminuir el margen en 40px */
+    margin-bottom: 0; /* Eliminar el margen inferior */
+  }
+
+  .ticketSearchButton:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (min-width: 1024px) { /* Escala lg */
+  .ticketSearchButton:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (min-width: 500px) {
+  .ticketSearchInput {
+    width: calc(80% - 30px); /* Hacer la barra de búsqueda 30px más pequeña */
+  }
+}
